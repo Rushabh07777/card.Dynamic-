@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.card{
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid red;
+ text-align: center;
+}
+
+</style>
+<body id="body">
+    <div class="card"></div>
+
+    <script>
+        let bank = [
+            {
+                name: 'Ramesh',
+                account: 'rsc1080911890',
+                IFSCcode: 365601,
+                balance: 3600000,
+            },
+            {
+                name: 'Prit',
+                account: 'fgc123456789',
+                IFSCcode: 360001,
+                balance: 3900000,
+            },
+
+            {
+                name: 'Prince',
+                account: 'pmc123456789',
+                IFSCcode: 400001,
+                balance: 10000000,
+            },
+
+            {
+                name: 'Aman',
+                account: 'Amn123456789',
+                IFSCcode: 500001,
+                balance: 8000000,
+            }
+        ];
+
+        bank.forEach((val) => {
+            let body = document.getElementById('body');
+
+        
+            let div = document.createElement('div');
+            div.className = 'card';
+
+       
+            let name = document.createElement('p');
+            name.textContent =`Name: ${val.name}`;
+            div.appendChild(name);
+
+     
+            let account = document.createElement('p');
+            account.textContent = `Account: ${val.account}`;
+            div.appendChild(account);
+
+        
+            let IFSCcode = document.createElement('p');
+            IFSCcode.textContent =`IFSCcode: ${val.IFSCcode}`;
+            div.appendChild(IFSCcode);
+
+       
+            let balance = document.createElement('p');
+            balance.textContent =`Balance: ${val.balance}`;
+            div.appendChild(balance);
+
+            body.appendChild(div);
+        });
+    </script>
+</body>
+
+</html>
